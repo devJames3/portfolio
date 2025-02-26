@@ -198,7 +198,7 @@ ScrollReveal().reveal(".about .professional-list li", {
   interval: 200,
 });
 ScrollReveal().reveal(
-  ".skills-description, .services-description, .contact-card, .client-swiper, .contact-left h2",
+  ".skills-description, .services-description, .contact-card, .client-swiper, .contact-left h2, ",
   {
     delay: 700,
     origin: "left",
@@ -216,4 +216,14 @@ ScrollReveal().reveal("footer .group", {
   delay: 500,
   origin: "top",
   interval: 200,
+});
+
+
+// load more element
+const loadMoreBtn = document.getElementById("loadMoreBtn");
+const moreContent = document.getElementById("moreContent");
+
+loadMoreBtn.addEventListener("click", function() {
+    moreContent.classList.toggle("show");
+    loadMoreBtn.textContent = moreContent.classList.contains("show") ? "Show Less" : "Load More";
 });
