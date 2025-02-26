@@ -161,7 +161,7 @@ navItems.forEach((navItem) => {
 //Common reveal options to create reveal animations
 ScrollReveal({
   // reset: true,
-  distance: "60px",
+  distance: "40px",
   duration: 2500,
   delay: 100,
 });
@@ -205,7 +205,7 @@ ScrollReveal().reveal(
   }
 );
 ScrollReveal().reveal(
-  ".experience-card, .service-card, .education, .portfolio .img-card",
+  ".experience-card, .service-card, .education, .portfolio",
   {
     delay: 800,
     origin: "bottom",
@@ -217,13 +217,24 @@ ScrollReveal().reveal("footer .group", {
   origin: "top",
   interval: 200,
 });
+// ScrollReveal().reveal('.img-card', { reset: true });
+
 
 
 // load more element
-const loadMoreBtn = document.getElementById("loadMoreBtn");
-const moreContent = document.getElementById("moreContent");
+const experienceLoadMoreBtn = document.getElementById("experienceLoadMoreBtn");
+const experienceMoreContent = document.getElementById("experienceMoreContent");
+const experienceLoadMoreText = document.querySelector(".experience-load-more-text");
 
-loadMoreBtn.addEventListener("click", function() {
-    moreContent.classList.toggle("show");
-    loadMoreBtn.textContent = moreContent.classList.contains("show") ? "Show Less" : "Load More";
-});
+const portfolioLoadMoreBtn = document.getElementById("portfolioLoadMoreBtn");
+const portfolioMoreContent = document.getElementById("portfolioMoreContent");
+const portfolioLoadMoreText = document.querySelector(".portfolio-load-more-text");
+
+
+const showContent = (contentContainer, loadMoreText) => {
+  contentContainer.classList.toggle("show");
+  loadMoreText.textContent = contentContainer.classList.contains("show") ? "Show Less" : "Load More";
+}
+
+experienceLoadMoreBtn.addEventListener("click", () => showContent(experienceMoreContent, experienceLoadMoreText));
+portfolioLoadMoreBtn.addEventListener("click", () => showContent(portfolioMoreContent, portfolioLoadMoreText));
