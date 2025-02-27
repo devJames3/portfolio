@@ -74,6 +74,8 @@
 
 html {
   scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%; /* Prevents text zoom issues */
+  min-height: 100dvh; /* Ensures full height on iPhones */
 }
 
 body {
@@ -81,6 +83,8 @@ body {
   background: var(--body-bg-color);
   margin: 2rem 0 0 0;
   transition: 0.5s ease;
+  -webkit-text-size-adjust: 100%; /* Prevents text zoom issues */
+  min-height: 100dvh; /* Ensures full height on iPhones */
 }
 
 a {
