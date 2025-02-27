@@ -55,7 +55,7 @@ const downloadButton = document.getElementById("download-cv");
 
 downloadButton.addEventListener("click", () => {
   const link = document.createElement("a");
-  link.href = "../Updated_Latest_Resume_January_2025.pdf";
+  link.href = "../Updated_Latest_Resume_February_2025.pdf";
   link.download = "James_CV.pdf";
   link.click();
 });

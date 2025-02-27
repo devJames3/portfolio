@@ -1507,4 +1507,19 @@ footer a {
   .contact-card .contact-btn .btn {
     font-size: 0.8rem;
   }
+
+  /* ===========SLIDER======= */
+  .swiper-button-next{
+    color: var(--second-color);
+    font-size: 2rem;
+    right: 0px;
+    padding-top: 94px;
+  }
+  .swiper-button-prev{
+    color: var(--second-color);
+    font-size: 2rem;
+    left: 0px;
+    padding-top: 94px;
+  }
 }
+
