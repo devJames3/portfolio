@@ -205,7 +205,7 @@ ScrollReveal().reveal(
   }
 );
 ScrollReveal().reveal(
-  ".experience-card, .service-card, .education, .portfolio",
+  ".experience-card, .service-card, .education, .portfolio .img-card, .portfolio-load-more-container, .experience-load-more-container",
   {
     delay: 800,
     origin: "bottom",
@@ -238,3 +238,13 @@ const showContent = (contentContainer, loadMoreText) => {
 
 experienceLoadMoreBtn.addEventListener("click", () => showContent(experienceMoreContent, experienceLoadMoreText));
 portfolioLoadMoreBtn.addEventListener("click", () => showContent(portfolioMoreContent, portfolioLoadMoreText));
+
+document.addEventListener("DOMContentLoaded", function () {
+    const imgCards = document.querySelectorAll(".img-card");
+
+    portfolioLoadMoreBtn.addEventListener("click", function () {
+        imgCards.forEach(card => {
+            card.style.opacity = "1";
+        });
+    });
+});
