@@ -224,6 +224,7 @@ ScrollReveal().reveal("footer .group", {
 // load more element
 const experienceLoadMoreBtn = document.getElementById("experienceLoadMoreBtn");
 const experienceMoreContent = document.getElementById("experienceMoreContent");
+const experienceMoreContainer = document.getElementById("skillsDescription");
 const experienceLoadMoreText = document.querySelector(".experience-load-more-text");
 
 const portfolioLoadMoreBtn = document.getElementById("portfolioLoadMoreBtn");
@@ -236,8 +237,19 @@ const showContent = (contentContainer, loadMoreText) => {
   loadMoreText.textContent = contentContainer.classList.contains("show") ? "Show Less" : "Load More";
 }
 
-experienceLoadMoreBtn.addEventListener("click", () => showContent(experienceMoreContent, experienceLoadMoreText));
-portfolioLoadMoreBtn.addEventListener("click", () => showContent(portfolioMoreContent, portfolioLoadMoreText));
+experienceLoadMoreBtn.addEventListener("click", () => {
+  showContent(experienceMoreContent, experienceLoadMoreText);
+  if (!experienceMoreContent.classList.contains("show")){
+    experienceMoreContainer.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+});
+portfolioLoadMoreBtn.addEventListener("click", () => {
+  showContent(portfolioMoreContent, portfolioLoadMoreText);
+  if (!portfolioMoreContent.classList.contains("show")){
+    parent = portfolioMoreContent.parentElement;
+    parent.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+});
 
 document.addEventListener("DOMContentLoaded", function () {
     const imgCards = document.querySelectorAll(".img-card");
