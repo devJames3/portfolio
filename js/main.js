@@ -184,7 +184,7 @@ ScrollReveal().reveal(".media-icons i, .contact-left li ", {
   origin: "left",
   interval: 200,
 });
-ScrollReveal().reveal(".home-img, .about-img", {
+ScrollReveal().reveal(".about-img", {
   delay: 500,
   origin: "bottom",
 });
