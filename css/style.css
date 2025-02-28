@@ -246,6 +246,7 @@ header.sticky .nav-bar {
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  min-height: 63vh;
 }
 
 .home-container .media-icons {
