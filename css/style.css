@@ -127,6 +127,7 @@ li {
   top: 100px;
   background: var(--transparent-color-01);
   backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px); /* Safari-specific */
   width: 50px;
   height: 50px;
   font-size: 1.2em;
@@ -689,6 +690,7 @@ header.sticky .nav-bar {
   left: 0;
   background: var(--bg-transparent-color);
   backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(20px); /* Safari-specific */
   visibility: hidden;
   opacity: 0;
   transition: 0.3s ease;
@@ -816,6 +818,7 @@ header.sticky .nav-bar {
   left: 0;
   background: var(--transparent-color-01);
   backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px); /* Safari-specific */
   visibility: hidden;
   opacity: 0;
   transition: 0.3s ease;
